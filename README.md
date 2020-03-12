@@ -19,7 +19,7 @@ deploy
 
 # 구동
 - python3 버전 기반으로 수행
-- 운영체계 및 서버 세팅 및 배포, 업데이트 관리 등등을 자동화 하는 모듈 => febric3
+- 운영체계 및 서버 세팅 및 배포, 업데이트 관리 등등을 자동화 하는 모듈 => 
 - $ pip install fabric3
 - git에 최종소스 반영
 - $ fab new_server
@@ -32,3 +32,13 @@ deploy
 # 잘 안된다!!
 - 소스코드상에, 파일명, 설정값 등 오타가 없어야 함
 - git 에 최종 소스가 모두 반영되어야 함
+- 리눅스에서 기존의 흔적을 모두 제거
+  현재위치 : /home/ubuntu
+  프로젝트 삭제 : $ rm -r -f deploy
+  숨김 파일 확인 
+  $ ls -a
+  가상환경 삭제 : 
+  $ rm -r -f .virtualenvs
+- 로컬 PC
+  $ fab new_server
+  
